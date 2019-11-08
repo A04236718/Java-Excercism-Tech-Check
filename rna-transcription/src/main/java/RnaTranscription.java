@@ -3,22 +3,25 @@ class RnaTranscription {
     String transcribe(String dnaStrand) {
 //    char charsOfDNA = dnaStrand.charAt(0);
     StringBuilder DNAStrand = new StringBuilder(dnaStrand);
+    String RNA ="";
 
 
-    for (int i = 0; i<DNAStrand.length(); i++){
+    for (int i = 0; i<dnaStrand.length(); i++){
         if (DNAStrand.charAt(i) == 'G'){
-            DNAStrand.setCharAt(i, 'C');
+             RNA = RNA + "C";
         }else if (DNAStrand.charAt(i) == 'C'){
-            DNAStrand.setCharAt(i,'G' );
+            RNA = RNA + "G";
         }else if (DNAStrand.charAt(i) == 'T'){
-            DNAStrand.setCharAt(i, 'A');
+            RNA = RNA + "A";
         }else if (DNAStrand.charAt(i) == 'A'){
-            DNAStrand.setCharAt(i, 'U');
+            RNA = RNA + "U";
         }
-        return DNAStrand.toString();
+//        return DNAStrand.toString();
+//          return RNA;
     }
-        System.out.println(DNAStrand);
-        return DNAStrand.toString();
+
+//        return DNAStrand.toString();
+        return RNA;
 
 }
 
